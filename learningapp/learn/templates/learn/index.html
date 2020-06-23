@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="{% static 'learn/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'learn/css/style.css' %}">
+        <script type="text/javascript" src="{% static 'learn/js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'learn/js/bootstrap.min.js' %}"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar navbar-light fixed-top" style="background-color: #e3f2fd;">
+                <a class="navbar-brand" href="#">
+                  <img src="{% static 'learn/pictures/chemistry.jpg' %}" height="40" alt="CoolBrand">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ">
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+              <div id="intro" class="view">
+                  <div class="mask rgba-black-strong">
+                      <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+                          <div class="row d-flex justify-content-center text-center">
+                              <div class="col-md-10">
+                                <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Welcome</h2>
+                                <hr class="hr-light">
+                                <h4 class="white-text my-4">welcome to this chemistry online platform.</h4>
+                                <button type="submit" class="btn btn-primary">
+                                <a class="btn btn-primary btn-lg" role="button" href="{% url 'learn:content-list'%}">start learning</a>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+        </header>
+        <main></main>
+        <footer></footer>
+    </body>
+</html>
